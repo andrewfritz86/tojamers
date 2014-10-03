@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 
-before_action :load_user, only: [:show, :edit, :destroy, :update,]
-before_action :authenticate, only: [:show, :edit, :destroy, :update,]
-before_action :authorize, only: [:show, :edit, :destroy, :update,]
+# before_action :load_user, only: [:show, :edit, :destroy, :update,]
+# before_action :authenticate, only: [:show, :edit, :destroy, :update,]
+# before_action :authorize, only: [:show, :edit, :destroy, :update,]
+
+before_action :authenticate_user!
 
 
   def index
