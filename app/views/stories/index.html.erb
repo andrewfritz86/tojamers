@@ -1,3 +1,7 @@
 <% @user.stories.each do |story| %>
 <%= story[:description] %>
 <% end %>
+</br>
+</br>
+
+Note for later. We are calling the stories method on the user object, which is defined in the action "index" in the story controller. This returns an activerecord object, which we can iterate through, and then grab each attribute/column as though we are accessing something in a hash.

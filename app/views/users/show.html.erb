@@ -13,4 +13,7 @@ This persons EMAIL is <%= @user.email %>
 First, let's try and display all the stories that belong to a user
 <%= link_to('my stories', "#{@user.id}/stories") %>
 </br>
+Next, let's try and get a link to making a new story for that user
+<%= link_to('make a new story', "#{@user.id}/stories/new") %>
+</br>
 <%= link_to('home',root_path) %>
