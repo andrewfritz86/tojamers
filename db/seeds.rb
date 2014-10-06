@@ -58,7 +58,7 @@ def random_story
     logo_url              = Faker::Company.logo
     business_location     = Faker::Address.city
     business_description  = Faker::Company.bs
-    my_skills             = "#{skills.sample}, #{skill.sample}, #@{skills.sample}"
+    my_skills             = "#{skills.sample}, #{skills.sample}, #{skills.sample}"
     nickname              = Faker::Name.name
     industry              = ["Web Development", "Finance", "Back-end Development", "Media", "Advertising"].sample
     founders              = "#{Faker::Name.name}, #{Faker::Name.name}, #{Faker::Name.name}"
