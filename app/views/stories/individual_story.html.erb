@@ -1,20 +1,20 @@
 INDIVIDUAL STORY
-
-Linkedin
-<%= @story.linked_in %>
+</br>
+Linkedin</br>
+<%= link_to(@story.linked_in) %>
 </br>
 A link to my personal Website
 </br>
-<%= @story.personal_site %>
+<%= link_to(@story.personal_site) %>
 </br>
 My image
 </br>
-<%= @story.image_url %>
+<%= image_tag(@story.image_url) %>
 </br>
 My Location
 </br>
 <%= @story.personal_location %>
-My story:
+My story</br>
 </br>
 <%= @story.personal_description %>
 </br>
