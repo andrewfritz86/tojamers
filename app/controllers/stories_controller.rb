@@ -10,10 +10,13 @@ class StoriesController < ApplicationController
     @story = Story.new
     @user_id = session[:user_id]
     @user = User.find(@user_id)
+    # binding.pry
     if @user.user_type == "individual"
       render :individual_form
-    else
+    elsif @user.user_type == "company"
       render :company_form
+    else
+      redirect_to root_path
     end
   end
 
@@ -21,8 +24,10 @@ class StoriesController < ApplicationController
     #need two pages here, if @story.user.user_type ==,,etc
     if @story.user.user_type == "company"
       render :company_story
-    else
+    elsif @story.user.user_type == "individual"
       render :individual_story
+    else
+      redirect_to root_path
     end
   end
 

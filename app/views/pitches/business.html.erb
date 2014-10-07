@@ -7,14 +7,27 @@
 <% end %>
 
 <!-- bar of links to different sorts of all pitches -->
-<%= link_to("Sort by individuals", pitches_individual_path) %> |
+<%= link_to("Sort by individuals", pitches_individual_path) %> <br>
 <%= link_to("Sort by businesses", pitches_business_path) %>
 </br>
 </br>
 
+<div class="row">
+<ul >
+
 <% @pitches.each do |pitch| %>
-   <% if pitch.user.user_type == "Company" %>
-     <%= link_to(pitch.body, story_path(pitch.story_id)) %>
-   </br>
-   <% end %>
-<% end %>
+   <% if pitch.user.user_type == "company" %>
+     <li class="col-sm-9 col-md-3">
+    <div class ="thumbnailz">
+      <div class="caption"  >
+                    <%= pitch.body%>
+              </br><br>
+        <p> <%= button_to("My Story", story_path(pitch.story_id), class: 'btn btn-large btn-primary', method: :get)  %></p>
+          </li>
+                <% end %>
+                <% end %>
+              </ul>
+      </div>
+    </div>
+  </div>
+

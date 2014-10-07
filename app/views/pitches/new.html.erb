@@ -1,8 +1,8 @@
-<h1>Pitches New page</h1>
+<h1>Make a New Hook!</h1>
 <%= form_for(@pitch, :url=> {:action=> (@pitch.new_record? ? 'create' : 'update')}) do |f| %>
-What's your pitch?
+<p>What's your hook?</p>
 <%= f.text_field :body %>
 <%= f.hidden_field :user_type, :value => @user_type %>
-</br>
-<%= f.submit "pitch it!" %>
+</br><br>
+<%= f.submit "Hook Em In!" %>
 <% end %>

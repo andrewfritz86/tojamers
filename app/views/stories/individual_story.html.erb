@@ -1,17 +1,18 @@
-INDIVIDUAL STORY
+
+<div class="text-center">
+<div class="logincontainer">
+<p>
+Linkedin
+<%= @story.linked_in %><br>
 </br>
-Linkedin</br>
-<%= link_to(@story.linked_in) %>
 </br>
-A link to my personal Website
+
 </br>
-<%= link_to(@story.personal_site) %>
-</br>
-My image
+<%= @story.image_url %><br><br>
 </br>
 <%= image_tag(@story.image_url) %>
 </br>
-My Location
+<%= @story.personal_description %><br><br>
 </br>
 <%= @story.personal_location %>
 My story</br>
@@ -22,8 +23,8 @@ My story</br>
 <%= @story.skills %> <!-- check that the att. here is the same in the seed file -->
 </br>
 
-
-PITCHES FOR THIS STORY
+<br>
+Hooks for this Story!
 </br>
 <% @story.pitches.each do |pitch| %>
   <%= link_to(pitch[:body], story_pitch_path(@story, pitch)) %>
@@ -39,6 +40,8 @@ PITCHES FOR THIS STORY
   </br>
 <% end %>
 <%= link_to 'Back', :back %>
+</div>
+</div>
 
 
 

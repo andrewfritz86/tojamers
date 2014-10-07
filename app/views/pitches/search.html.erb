@@ -11,9 +11,25 @@
 <%= link_to("Sort by individuals", pitches_individual_path) %>
 <%= link_to("Sort by businesses", pitches_business_path) %>
 
-<ol>
+
+<div class="row">
+<ul >
 <% @pitches.each do |pitch| %>
-  <%= link_to(pitch.body, story_path(pitch.story_id)) %>
-  </br>
-<% end %>
-</ol>
+  <li class="col-sm-9 col-md-3">
+    <% if pitch.user.user_type == "company" %>
+      <div class ="thumbnailz">
+        <% else %>
+          <div class ="thumbnailx">
+            <% end %>
+      <div class="caption"  >
+            <%= pitch.body%>
+              </br><br>
+        <p> <%= button_to("My Story", story_path(pitch.story_id), class: 'btn btn-large btn-primary', method: :get)  %></p>
+          </li>
+                <% end %>
+              </ul>
+      </div>
+    </div>
+  </div>
+
+

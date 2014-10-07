@@ -1,26 +1,28 @@
-INDIVIDUAL EDIT FORM
-INDIVIDUAL STORY FORM HERE
+
+<div id="logincontainter">
+Tell us about yourself!
 <%= form_for @story do |f| %>
-What's a nickname for this story?
+What's a nickname for this story?<br>
 <%= f.text_field :nickname %>
   </br>
-  LinkedIn profile:
+  LinkedIn profile:<br>
   <%= f.text_field :linked_in %>
   </br>
-  Personal website:
+  Personal website:<br>
   <%= f.text_field :personal_site %>
   </br>
-  Link to your image:
+  Link to your image:<br>
   <%= f.text_field :image_url %>
   </br>
-  Your location
+  Your location<br>
   <%= f.text_field :personal_location %>
   </br>
-  YOUR BIG PITCH HERE YOU SELF-AGGRANDIZING SHITBAG
+  Your Pitch Please<br>
   <%= f.text_field :personal_description %>
   </br>
-  YOUR SKILLZ HERE
+  What are your skills?<br>
   <%= f.text_field :skills %>
   </br>
   <%= f.submit "submit" %>
 <% end %>
+</div>

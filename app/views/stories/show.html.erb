@@ -1,3 +1,5 @@
+<div id="logincontainer">
+
 Description:
 <%= @story[:description] %>
 </br>
@@ -5,11 +7,13 @@ Description:
 PITCHES BELOW:
 </br>
 </br>
-<% @story.pitches.each do |pitch| %>
-<%= link_to(pitch[:body], story_pitch_path(@story, pitch)) %>
+  <div class="text-center">
+    <% @story.pitches.each do |pitch| %>
+      <%= link_to(pitch[:body], story_pitch_path(@story, pitch)) %>
+    <% end %>
+  </div>
 </br>
 </br>
-<% end %>
 </br>
 <% if authorized? || admin? %>
   <%= link_to("Edit this story", edit_story_path(@story)) %>
@@ -20,3 +24,4 @@ PITCHES BELOW:
   </br>
 <% end %>
 <%= link_to 'Back', :back %>
+</div>
