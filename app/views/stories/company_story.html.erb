@@ -1,10 +1,13 @@
 <div class="text-center">
+  <div class="logincontainer">
 
 COMPANY STORY
 </br>
 <%= @story.business_name %>
 </div>
+</div>
 
+<div class="logincontainer">
 Business Name:
 <%= @story.business_name %></br>
 <%= image_tag(@story.logo_url) %></br>
@@ -21,7 +24,11 @@ Size:
 Year founded:
 <%= @story.year_founded %></br>
 </br></br><br><br>
-PITCHES FOR THIS STORY
+</div>
+
+<div class="text-center">
+  <div class="logincontainer">
+Hooks for this story!
 </br>
 <% @story.pitches.each do |pitch| %>
   <%= link_to(pitch[:body], story_pitch_path(@story, pitch)) %>
@@ -38,4 +45,5 @@ PITCHES FOR THIS STORY
 <% end %>
 <%= link_to 'Back', :back %>
 
+</div>
 </div>
