@@ -58,7 +58,7 @@ def random_story
     logo_url              = Faker::Company.logo
     business_location     = Faker::Address.city
     business_description  = Faker::Company.bs
-    my_skills             = "#{skills.sample}, #{skill.sample}, #@{skills.sample}"
+    my_skills               = "#{skills.sample}, #{skills.sample}, ##{skills.sample}"
     nickname              = Faker::Name.name
     industry              = ["Web Development", "Finance", "Back-end Development", "Media", "Advertising"].sample
     founders              = "#{Faker::Name.name}, #{Faker::Name.name}, #{Faker::Name.name}"
@@ -145,8 +145,8 @@ end
 
 
 # #####we need to generate a random user/story/and pitch for 2-3 people and 1-2 businesses
-# #janine is an INDIVIDUAL
-# janine = User.new(
+
+# janine = User.create(
 #   first_name: "Janine",
 #   last_name: "Harper",
 #   email: "Janine@gmail.com",
@@ -154,22 +154,31 @@ end
 #   user_type: "individual",
 #   password: "janine"
 #   )
-# janines_story = Story.new(
-#   my_skills: "HTML, CSS, Bootstrap, Ruby, Ruby on Rails",
+
+# janines_story = Story.create(
+#   skills: "HTML, CSS, Bootstrap, Ruby, Ruby on Rails",
 #   linked_in: "PUT THIS IN TOMORROW",
 #   personal_site: "PUT THIS IN TOMORROW",
-#   description: "Janine should put what she wants to work on here (ERD, backend stuff)",
+#   personal_description: "Janine Harper is an award-winning journalist who has covered Hurricane Katrina, Lehman Shock, US Presidential Elections and the World Baseball Classic in Cuba . She graduated from Howard University in 1999 and then left for Japan to teach English to school children.
+
+# She’s in the tenth week of a Web Development Immersive at General Assembly making the transition to web developer and hopes to create apps that improve people’s lives.
+# When she is not getting into shoving matches with North Korean diplomats, she enjoys living with her husband and daughter on a tree-lined street in Crown Heights. She enjoys snowboarding, camping, writing and using her crockpot.",
 #   nickname: "my story",
-#   image_url: "PUT TOMORROW"
+#   image_url: "https://s3.amazonaws.com/uploads.hipchat.com/39979/1053074/yxJSj6WeztqHnOH/jansheadshot.jpg"
 #   )
 # janines_story.user = janine
-
-# janines_pitch = Pitch.new(
+# janines_story.save
+# janine.save
+# janines_pitch = Pitch.create(
 #   body: "Anyone need help with backend stuff? Really trying to work on writing some super RESTful routes!!"
 #   )
 # janines_pitch.story = janines_story
+# janines_pitch.save
+# janine.save
 
-# larkin = User.new(
+
+
+# larkin = User.create(
 #   first_name: "Mike",
 #   last_name: "Larkin",
 #   email: "BarkinLarkin@gmail.com",
@@ -177,17 +186,93 @@ end
 #   user_type: "individual",
 #   password: "larkin"
 #   )
-# larkins_story = Story.new(
-#   my_skills: "HTML, CSS, Bootstrap, Ruby, Ruby on Rails, radio, media, advertising, gruff brooklyn accents",
+# larkins_story = Story.create(
+#   skills: "HTML, CSS, Bootstrap, Ruby, Ruby on Rails, radio, media, advertising, gruff brooklyn accents",
 #   linked_in: "PUT THIS IN TOMORROW",
 #   personal_site: "PUT THIS IN TOMORROW",
-#   description: "TRANSFErRING CAREERS INTO DEV FROM MEDIA or something ",
-#   nickname: "the saga of larkin"
-#   image_url: "put this tomorrow"
+#   personal_description: "TRANSFErRING CAREERS INTO DEV FROM MEDIA or something ",
+#   nickname: "the saga of larkin",
+#   image_url: "http://cdn2-www.wrestlezone.com/assets/uploads/2009/11/file_187255_4_milliondollarman_o.jpg"
 #   )
 # larkins_story.user = larkin
+# larkins_story.save
 
-# larkins_pitch = Pitch.new(
+# larkins_pitch = Pitch.create(
 #   body: "ANY HOT GIRLS WANT HELP WITH THEIR BACK END??"
 #   )
 # larkins_pitch.story = larkins_story
+# larkins_pitch.save
+
+
+
+
+# fritzy = User.create(
+#   first_name: "Andy",
+#   last_name: "Fritz",
+#   email: "Andrew.Fritz@gmail.com",
+#   phone: "7739979148",
+#   user_type: "individual",
+#   password: "andy"
+#   )
+# fritzy_story = Story.create(
+#   skills: "Photoshop, Lightroom, Sinatra, HTML, CSS, Bootstrap, Ruby, Ruby on Rails",
+#   linked_in: "PUT THIS IN TOMORROW",
+#   personal_site: "PUT THIS IN TOMORROW",
+#   personal_description: "I'm a world traveler and a wearer of many hats. Most recently, I worked in content management at Warby Parker
+#   , and before that, I taught English abroad as volunteer with the Peace Corps. I'm a recent graduate of General Assembly's Web
+#   Development Immersive program, and my goal is to build my portfolio and skillset in full-stack web design. In addition to the skills
+#   listed above, I have experience with project management and some user experience design experience as well!
+
+#     I'm hoping to work for a company or work on a project that has a clear and admirable mission. I'm a huge self-starter and great at learning on my own
+#     but I'd love to be paired with someone looking to teach as well!
+#   ",
+#   nickname: "my story",
+#   image_url: "put this tomorrow"
+
+#   )
+# fritzy_story.user = fritzy
+# fritzy_story.save
+
+# fritzy_pitch = Pitch.create(
+#   body: "Looking to branch out and write some killer CSS!"
+#   )
+# fritzy_pitch.story = fritzy_story
+# fritzy_pitch.save
+
+
+
+# ###business user pitches
+
+# toro = User.create(
+#   first_name: "Toro",
+#   last_name: "Roja",
+#   email: "ToroRoja@gmail.com",
+#   phone: "4123456675",
+#   user_type: "company",
+#   password: "toro"
+#   )
+
+# toros_story = Story.create(
+#   nickname: "marketing",
+#     business_name: "Toro's Digital Marketing",
+#     business_location: "Yonkers",
+#     logo_url: "http://vector-magz.com/wp-content/uploads/2013/06/red-bull-logo-vector1.png",
+#     business_description: "Toro Roja marketing is here for all your digital and print marketing needs!
+#     We've been around for the better part of 100 years, and you'd never guess it. We're in the process of modernizing
+#     our whole business architecture, and we need developers and designers to help us with that transition",
+#     industry: "Marketing",
+#     founders: "Mike Larkin, Toro Roja",
+#     size: 1,
+#     year_founded: 1930
+#   )
+
+# toros_story.user = toro
+# toros_story.save
+
+# toros_pitch = Pitch.create(
+#   body: "Calling anyone with solid backbone skills!"
+#   )
+
+# toros_pitch.story = toros_story
+
+# toros_pitch.save
