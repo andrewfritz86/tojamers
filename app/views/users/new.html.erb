@@ -1,29 +1,29 @@
-Create an account!
+<p>Create an account!</p>
 </br>
 </br>
 <%= form_for @user do |f| %>
-Enter email
+<p>Enter email</p>
 <%= f.text_field :email %>
 </br>
-Enter first name
+<p>Enter first name</p>
 <%= f.text_field :first_name %>
 </br>
-Enter last name
+<p>Enter last name</p>
 <%= f.text_field :last_name %>
 </br>
-Enter phone #
+<p>Enter phone #</p>
 <%= f.text_field :phone %>
 </br>
-Enter password
+<p>Enter password</p>
 <%= f.password_field :password %>
 </br>
-Confirm password
+<p>Confirm password</p>
 <%= f.password_field :password_confirmation %>
 </br>
-Are you a company?
-Yes
+<p>Are you a company?</p>
+<p>Yes</p>
 <%= radio_button_tag(:user_type, "company") %>
-No
+<p>No</p>
 <%= radio_button_tag(:user_type, "individual") %>
 </br>
 <%= f.submit "create account!" %>
