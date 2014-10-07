@@ -73,7 +73,7 @@ class PitchesController < ApplicationController
   end
 
   def load_all_pitches
-    @pitches = Pitch.all
+    @pitches = Pitch.all.reverse
   end
 
   private
