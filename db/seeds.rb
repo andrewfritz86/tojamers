@@ -16,7 +16,7 @@ def random_user_company
     'user']['name']['last']
   email = response['results'][0]['user']['email']
   phone = response['results'][0]['user']['phone']
-  user_type = "Company"
+  user_type = "Company" #need to make these lowercase
   password = response['results'][0]['user']['password']
   User.create(first_name: first_name, last_name: last_name, email: email, phone: phone, user_type: user_type, password: password)
 end
@@ -27,7 +27,7 @@ def random_user_individual
   last_name = response['results'][0]['user']['name']['last']
   email = response['results'][0]['user']['email']
   phone = response['results'][0]['user']['phone']
-  user_type = "Individual"
+  user_type = "Individual" #needs to be lowercase
   password = response['results'][0]['user']['password']
   User.create(first_name: first_name, last_name: last_name, email: email, phone: phone, user_type: user_type, password: password)
 end
@@ -140,3 +140,54 @@ end
 #                   redis: redis,
 #                   postgresql: postgresql,
 #                   mysql: mysql,
+
+
+
+
+# #####we need to generate a random user/story/and pitch for 2-3 people and 1-2 businesses
+# #janine is an INDIVIDUAL
+# janine = User.new(
+#   first_name: "Janine",
+#   last_name: "Harper",
+#   email: "Janine@gmail.com",
+#   phone: "77338829129",
+#   user_type: "individual",
+#   password: "janine"
+#   )
+# janines_story = Story.new(
+#   my_skills: "HTML, CSS, Bootstrap, Ruby, Ruby on Rails",
+#   linked_in: "PUT THIS IN TOMORROW",
+#   personal_site: "PUT THIS IN TOMORROW",
+#   description: "Janine should put what she wants to work on here (ERD, backend stuff)",
+#   nickname: "my story",
+#   image_url: "PUT TOMORROW"
+#   )
+# janines_story.user = janine
+
+# janines_pitch = Pitch.new(
+#   body: "Anyone need help with backend stuff? Really trying to work on writing some super RESTful routes!!"
+#   )
+# janines_pitch.story = janines_story
+
+# larkin = User.new(
+#   first_name: "Mike",
+#   last_name: "Larkin",
+#   email: "BarkinLarkin@gmail.com",
+#   phone: "6461233234",
+#   user_type: "individual",
+#   password: "larkin"
+#   )
+# larkins_story = Story.new(
+#   my_skills: "HTML, CSS, Bootstrap, Ruby, Ruby on Rails, radio, media, advertising, gruff brooklyn accents",
+#   linked_in: "PUT THIS IN TOMORROW",
+#   personal_site: "PUT THIS IN TOMORROW",
+#   description: "TRANSFErRING CAREERS INTO DEV FROM MEDIA or something ",
+#   nickname: "the saga of larkin"
+#   image_url: "put this tomorrow"
+#   )
+# larkins_story.user = larkin
+
+# larkins_pitch = Pitch.new(
+#   body: "ANY HOT GIRLS WANT HELP WITH THEIR BACK END??"
+#   )
+# larkins_pitch.story = larkins_story
