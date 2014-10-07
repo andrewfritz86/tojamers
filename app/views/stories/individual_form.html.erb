@@ -1,26 +1,25 @@
 <div id="logincontainer">
 
-INDIVIDUAL STORY FORM HERE
 <%= form_for @story do |f| %>
-What's a nickname for this story?
+<p>What's a nickname for this story?</p>
 <%= f.text_field :nickname %>
   </br>
-  LinkedIn profile:
+  <p>LinkedIn profile:</p>
   <%= f.text_field :linked_in %>
   </br>
-  Personal website:
+  <p>Personal website:</p>
   <%= f.text_field :personal_site %>
   </br>
-  Link to your image:
+  <p>Link to your image:</p>
   <%= f.text_field :image_url %>
   </br>
-  Your location
+  <p>Your location</p>
   <%= f.text_field :personal_location %>
   </br>
-  YOUR BIG PITCH HERE YOU SELF-AGGRANDIZING SHITBAG
+  <p>Your Big Pitch</p>
   <%= f.text_field :personal_description %>
   </br>
-  YOUR SKILLZ HERE
+  <p>What are your skills?</p>
   <%= f.text_field :skills %>
   </br>
   <%= f.submit "submit" %>
