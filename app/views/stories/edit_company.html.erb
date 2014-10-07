@@ -1,31 +1,33 @@
-EDIT FORM
+<div id="logincontainer">
+<h1>Edit Your Company</h1>
 <%= form_for @story do |f| %>
-What's a nickname for this story?
+<p>What's a nickname for this story?</p>
 <%= f.text_field :nickname %>
 </br>
-Business name
+<p>Business name</p>
 <%= f.text_field :business_name %>
 </br>
-Logo URL
+<p>Logo URL</p>
 <%= f.text_field :logo_url %>
 </br>
-Business location
+<p>Business location</p>
 <%= f.text_field :business_location %>
 </br>
-Business Description
+<p>Business Description</p>
 <%= f.text_field :business_description %>
 </br>
-Industry
+<p>Industry</p>
 <%= f.text_field :industry %>
 </br>
-Founders
+<p>Founders</p>
 <%= f.text_field :founders %>
 </br>
-Size
+<p>Size</p>
 <%= f.text_field :size %>
 </br>
-Year Founded
+<p>Year Founded</p>
 <%= f.text_field :year_founded %>
-</br>
+</br><br>
 <%= f.submit "submit" %>
 <% end %>
+</div>

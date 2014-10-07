@@ -1,11 +1,12 @@
 <h1>All Hooks</h1>
-
+<p>
 <!-- Search bar  -->
 <%= form_tag('/pitches/search', method: "post") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
+</p>
 
 <!-- bar of links to different sorts of all pitches -->
 <%= link_to("Sort by individuals", pitches_individual_path) %> <br>

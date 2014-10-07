@@ -1,7 +1,7 @@
 
-BODY OF PITCH:
+<p>This is your Hook:</p>
 </br>
-<%= @pitch.body %>
+<p><%= @pitch.body %></p>
 </br>
 <% if authorized? || admin? %>
   <%= link_to 'Edit this pitch', edit_story_pitch_path(@story, @pitch) %>
@@ -10,3 +10,4 @@ BODY OF PITCH:
 <% end %>
 </br>
 <%= link_to 'back', :back %>
+</p>
